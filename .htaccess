@@ -1,0 +1,7 @@
+
+AddHandler x-httpd-php .html .htm
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} mc3millworks\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://mc3millworks.com/$1 [R,L]
