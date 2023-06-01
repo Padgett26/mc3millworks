@@ -1,16 +1,9 @@
 <?php
 session_start ();
 
-$dbhost = 'localhost';
-$dbname = 'mc3';
-$dbuser = 'mc3_user';
-$dbpass = 'PloiK098m';
+include "../globalFunctions.php";
 
-try {
-	$db = new PDO ( "mysql:host=$dbhost; dbname=$dbname", "$dbuser", "$dbpass" );
-} catch ( PDOException $e ) {
-	echo "";
-}
+$db = db_mc3();
 
 $buildMode = false;
 $time = time ();
