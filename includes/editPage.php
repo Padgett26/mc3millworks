@@ -57,7 +57,7 @@ if (filter_input(INPUT_POST, 'picUp', FILTER_SANITIZE_STRING)) {
             if ($width != null && $height != null) {
                 $imageType = getPicType($_FILES["image"]['type']);
                 $imageName = $time . "." . $imageType;
-                processPic("$domain/images", $imageName, $tmpFile, 1000, 150);
+                processPic("images", $imageName, $tmpFile, 1000, 150);
                 $pstmt = $db->prepare(
                         "INSERT INTO pics VALUES" .
                         "(NULL,?,?,?,?,?,'0','0','0')");

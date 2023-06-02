@@ -126,7 +126,7 @@ if ($show == "TelevisionCommercials") {
                     if ($width != null && $height != null) {
                         $imageType = getPicType($_FILES["image"]['type']);
                         $imageName = $time . "." . $imageType;
-                        processPic("$domain/images", $imageName, $tmpFile, 1000,
+                        processPic("images", $imageName, $tmpFile, 1000,
                                 150);
                         $pstmt = $db->prepare(
                                 "INSERT INTO pics VALUES" .
